@@ -5,7 +5,7 @@
 # INPUT: sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
 # OUTPUT: 6
 
-def maximo(lista: list[int]) -> int:
+def maximum(lista: list[int]) -> int:
     curr_max: int = lista[0]
     
     for i in lista:
@@ -19,7 +19,7 @@ def mostWordsFound(sentences: list[str]) -> int:
     for i in sentences:
         sentences_lengths.append(len(i.split()))
     
-    return maximo(sentences_lengths)
+    return maximum(sentences_lengths)
 
     
 if __name__ == "__main__":

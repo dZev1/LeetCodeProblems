@@ -1,16 +1,16 @@
 def decodeMessage(key: str, message: str) -> str:
-    diccionario_clave: dict[str, str] = {}
+    code_dict: dict[str, str] = {}
     curr_letra: str = 'a'
     decoded_message: str = ""
     
     for i in key:
-        if i not in diccionario_clave.keys() and i != ' ':
-            diccionario_clave[i] = curr_letra
+        if i not in code_dict.keys() and i != ' ':
+            code_dict[i] = curr_letra
             curr_letra = chr(ord(curr_letra) + 1)
     
     for letra in message:
-        if letra in diccionario_clave.keys():
-            decoded_message += diccionario_clave[letra]
+        if letra in code_dict.keys():
+            decoded_message += code_dict[letra]
         else:
             decoded_message += letra
         
