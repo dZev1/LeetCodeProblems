@@ -1,2 +1,2 @@
-
-        curr = 0 
+numOfRows = 5
+    print(generate(5))
